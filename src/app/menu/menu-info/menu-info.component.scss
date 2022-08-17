@@ -1,0 +1,94 @@
+@import "~src/assets/scss/config";
+
+.#{$style-prefix}-menu {
+  padding: 20px;
+
+  &__card {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    // max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &-image {
+      width: 100%;
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+
+      img {
+        position: absolute;
+        height: 64px;
+        top: -6px;
+        right: 0;
+      }
+    }
+
+    &-footer {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 20px;
+      background-color: $primary;
+      width: 100%;
+    }
+
+    span,
+    small {
+      color: #fefefe;
+    }
+  }
+
+  &__back {
+    width: 100%;
+    height: 48px;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__add-to-cart {
+    width: 100%;
+    height: 48px;
+    font-size: 18px;
+    color: #fefefe;
+    background-color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__quantity {
+    border: 1px solid $primary;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+
+    &-quantity {
+      flex: 3;
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-decrease,
+    &-increase {
+      cursor: pointer;
+      flex: 1;
+      font-size: 32px;
+      color: #fefefe;
+      background-color: $primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+}

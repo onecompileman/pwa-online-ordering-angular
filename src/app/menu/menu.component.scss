@@ -1,0 +1,27 @@
+@import "~src/assets/scss/config";
+
+.#{$style-prefix}-home {
+  padding: 20px;
+
+  &__card {
+    // box-shadow: 0 5px 10px rgba(0,0,0,0.12);\
+    text-decoration: none;
+    margin-bottom: 10px;
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+
+    img {
+      height: 120px;
+    }
+
+    span {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #fefefe;
+    }
+  }
+}

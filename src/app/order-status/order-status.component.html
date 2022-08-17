@@ -1,0 +1,96 @@
+<div class="gc-order">
+  <ng-container *ngIf="orders?.length; else emptyOrder">
+    <h4>Orders</h4>
+    <div class="row" *ngFor="let order of orders; let i = index">
+      <div class="col-12">
+        <div class="gc-order__card">
+          <b style="font-size: 20px">Order {{ i + 1 }}</b>
+          <span> {{ order.dateSubmitted | date: "medium" }} </span>
+          <ng-container *ngFor="let orderMenu of order.orderMenus">
+            <span class="mt-1">
+              <b>{{ orderMenu.quantity }}</b> {{ orderMenu.menuName }} &nbsp;
+              {{ orderMenu.quantity * orderMenu.menuPrice | number: "1.2-2" }}
+            </span>
+            <div class="gc-order__progress">
+              <div class="row">
+                <div class="col-6">
+                  <small>Prep Time</small>
+                  <div class="gc-order__progress-item">
+                    <div
+                      class="gc-order__progress-thumb"
+                      [class.gc-order__progress-thumb--done]="
+                        orderMenu.prepTimeCompletion >= 100
+                      "
+                      [ngStyle]="{ width: orderMenu.prepTimeCompletion + '%' }"
+                    ></div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <small>Cooking Time</small>
+                  <div class="gc-order__progress-item">
+                    <div
+                      class="gc-order__progress-thumb"
+                      [class.gc-order__progress-thumb--done]="
+                        orderMenu.cookingTimeCompletion >= 100
+                      "
+                      [ngStyle]="{
+                        width: orderMenu.cookingTimeCompletion + '%'
+                      }"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12">
+        <h5>
+          Price:
+          <small>₱ {{ totalPrice | number: "1.2-2":"en-US" }}</small>
+        </h5>
+        <h5>
+          Service Charge:
+          <small
+            >₱ {{ totalPrice * serviceCharge | number: "1.2-2":"en-US" }}</small
+          >
+        </h5>
+        <h5>
+          VAT 12%:
+          <small>₱ {{ totalPrice * vat | number: "1.2-2":"en-US" }}</small>
+        </h5>
+
+        <h4>
+          Total Amount:
+          <small>₱ {{ totalAmount | number: "1.2-2":"en-US" }}</small>
+        </h4>
+      </div>
+    </div>
+  </ng-container>
+
+  <div class="row mt-4">
+    <div class="col-12">
+      <a
+        *ngIf="canBillOut"
+        [routerLink]="['/bill-out']"
+        class="gc-order__submit-order"
+      >
+        Bill out
+      </a>
+      <a [routerLink]="['/']" class="gc-order__back" style="font-size: 18px">
+        Back to home
+      </a>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyOrder>
+  <div class="gc-order__empty-cart">
+    <img src="assets/images/order.svg" alt="Cart" />
+    <b class="mt-4">No Orders Yet!</b>
+    <span>Sorry mon ami, you have no orders.</span>
+  </div>
+</ng-template>

@@ -1,0 +1,59 @@
+<div class="gc-menu">
+  <h4>Menu Details</h4>
+  <div class="row">
+    <div class="col-12">
+      <div class="gc-menu__card">
+        <div
+          class="gc-menu__card-image"
+          [ngStyle]="{
+            backgroundImage: 'url(assets/images/menu/' + menu?.pictureUrl + ')'
+          }"
+        >
+          <img
+            *ngIf="menu?.isChefRecommendation"
+            src="assets/images/recommend.svg"
+            alt=""
+          />
+        </div>
+        <div class="gc-menu__card-footer">
+          <span>{{ menu?.name }}</span>
+          <small> {{ menu?.preparationTime }} mins prep time </small>
+          <small> {{ menu?.cookingTime }} mins cooking time </small>
+          <small> ₱ {{ menu?.price }}.00 </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col-12">
+      <div class="gc-menu__quantity">
+        <div class="gc-menu__quantity-decrease" (click)="decreaseQuantity()">
+          -
+        </div>
+        <div class="gc-menu__quantity-quantity">{{ orderMenu.quantity }}</div>
+        <div class="gc-menu__quantity-increase" (click)="increaseQuantity()">
+          +
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-12">
+      <h4>
+        Price:
+        <small>₱ {{ orderMenu?.menuPrice * orderMenu.quantity }}</small>
+      </h4>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col-12">
+      <div (click)="addToCart()" class="gc-menu__add-to-cart">Add to cart</div>
+      <a [routerLink]="['/menu']" class="gc-menu__back" style="font-size: 18px">
+        Back to menu
+      </a>
+    </div>
+  </div>
+</div>

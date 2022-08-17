@@ -1,0 +1,47 @@
+<div class="gc-home">
+  <h4>Categories</h4>
+  <div class="row">
+    <div class="col-sm-6 col-xs-12">
+      <a (click)="addAllChefsRecommendation()" class="gc-home__card">
+        <img src="assets/images/recommend.svg" alt="Order" />
+        <span>Add All Chef's Recommendation</span>
+      </a>
+    </div>
+    <div class="col-sm-6 col-xs-12">
+      <a
+        [routerLink]="['/menu', menuClassification.MAIN_COURSE]"
+        class="gc-home__card"
+      >
+        <img src="assets/images/main.svg" alt="Order" />
+        <span>Main Course</span>
+      </a>
+    </div>
+    <div class="col-sm-6 col-xs-12">
+      <a
+        [routerLink]="['/menu', menuClassification.APPETIZER]"
+        class="gc-home__card"
+      >
+        <img src="assets/images/appetizer.svg" alt="Order" />
+        <span>Appetizers</span>
+      </a>
+    </div>
+    <div class="col-sm-6 col-xs-12">
+      <a
+        [routerLink]="['/menu', menuClassification.DESSERT]"
+        class="gc-home__card"
+      >
+        <img src="assets/images/dessert.svg" alt="Order" />
+        <span>Desserts</span>
+      </a>
+    </div>
+    <div class="col-sm-6 col-xs-12">
+      <a
+        [routerLink]="['/menu', menuClassification.DRINKS]"
+        class="gc-home__card"
+      >
+        <img src="assets/images/drinks.svg" alt="Order" />
+        <span>Drinks</span>
+      </a>
+    </div>
+  </div>
+</div>

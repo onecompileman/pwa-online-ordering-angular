@@ -1,0 +1,68 @@
+<div class="gc-app">
+  <ng-container *ngIf="showNavbar">
+    <nav class="gc-app__navbar">
+      <div class="d-flex align-items-center">
+        <div class="gc-app__navbar-brand">Gc</div>
+        <span class="gc-app__navbar-title"> Garcon </span>
+      </div>
+      <div class="btn-group" dropdown>
+        <div
+          id="button-basic"
+          dropdownToggle
+          type="button"
+          class="dropdown-toggle gc-app__navbar-dropdown"
+          aria-controls="dropdown-basic"
+        >
+          Table #{{ tableNo }} <span class="caret"></span>
+        </div>
+        <ul
+          id="dropdown-basic"
+          *dropdownMenu
+          class="dropdown-menu dropdown-menu-right"
+          role="menu"
+          aria-labelledby="button-basic"
+        >
+          <li role="menuitem">
+            <a [routerLink]="['/cart']" class="dropdown-item"
+              ><i class="fa fa-shopping-cart me-2"></i> Cart
+              <span
+                *ngIf="cartItemsLength"
+                class="badge badge-pill badge-danger ms-2"
+                >{{ cartItemsLength }}</span
+              ></a
+            >
+          </li>
+          <li role="menuitem">
+            <a [routerLink]="['/order-status']" class="dropdown-item"
+              >Order Status
+              <span
+                *ngIf="ordersItemsLength"
+                class="badge badge-pill badge-danger ms-2"
+                >{{ ordersItemsLength }}</span
+              ></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="gc-app__sub-navbar">
+      <ol class="breadcrumb">
+        <ng-container *ngFor="let b of breadcrumbs">
+          <li *ngIf="b.path" class="breadcrumb-item">
+            <a [routerLink]="b.path">{{ b.text }}</a>
+          </li>
+          <li
+            *ngIf="!b.path"
+            class="breadcrumb-item active"
+            aria-current="page"
+          >
+            {{ b.text }}
+          </li>
+        </ng-container>
+      </ol>
+    </div>
+  </ng-container>
+  <div class="gc-app__page">
+    <router-outlet></router-outlet>
+  </div>
+</div>

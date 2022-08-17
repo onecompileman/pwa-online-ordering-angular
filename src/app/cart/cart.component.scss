@@ -1,0 +1,93 @@
+@import "~src/assets/scss/config";
+
+.#{$style-prefix}-cart {
+  padding: 20px;
+
+  &__empty-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+
+    b {
+      font-size: 20px;
+    }
+
+    img {
+      height: 150px;
+      width: auto;
+    }
+  }
+
+  &__quantity {
+    border: 1px solid $primary;
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+
+    &-quantity {
+      flex: 2;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-decrease,
+    &-increase {
+      cursor: pointer;
+      flex: 1;
+      font-size: 16px;
+      color: #fefefe;
+      background-color: $primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  &__back {
+    width: 100%;
+    height: 48px;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__submit-order {
+    width: 100%;
+    height: 48px;
+    font-size: 18px;
+    color: #fefefe;
+    background-color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__cancel {
+    width: 150px;
+    height: 36px;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__continue {
+    width: 150px;
+    height: 36px;
+    font-size: 14px;
+    color: #fefefe;
+    background-color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

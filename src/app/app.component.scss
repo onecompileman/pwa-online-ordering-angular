@@ -1,0 +1,65 @@
+@import '~src/assets/scss/config';
+
+.#{$style-prefix}-app {
+
+    &__sub-navbar {
+        background-color: #eee;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        // top: 60px;
+        // position: sticky;
+    }
+
+    &__navbar {
+        background-color: $primary;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        // top: 0;
+        // position: sticky;
+
+        &-brand {
+            padding: 5px 10px;
+            font-size: 24px;
+            color: white;
+            border-radius: 5px;
+            border: 1px solid white;
+        }
+
+        &-title {
+            margin-left: 10px;
+            color: #fefefe;
+        }
+
+        &-dropdown {
+            color: #fefefe;
+        }
+    }
+
+    &__page {
+        height: calc(100vh - 60px);
+        overflow-y: scroll;
+        background-color: #fcfcfc;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        // &::-webkit-scrollbar-track {
+        //     // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        // }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+        }
+           
+    }
+
+}

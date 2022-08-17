@@ -1,0 +1,6 @@
+{
+  "hosting": {
+    "public": "dist/garcon-web-app",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

@@ -1,0 +1,42 @@
+<div class="gc-billout p-4">
+  <h4>Receipt</h4>
+  <div class="row">
+    <div class="col-5">Order</div>
+    <div class="col-3">Quantity</div>
+    <div class="col-4">Total</div>
+  </div>
+  <hr />
+  <ng-container *ngFor="let order of orders; let i = index">
+    <div class="row mt-2" *ngFor="let orderMenu of order.orderMenus">
+      <div class="col-5">
+        {{ orderMenu.menuName }}
+      </div>
+      <div class="col-3">
+        {{ orderMenu.quantity }}
+      </div>
+      <div class="col-4">₱ {{ orderMenu.menuPrice * orderMenu.quantity }}</div>
+    </div>
+  </ng-container>
+
+  <div class="row mt-4">
+    <div class="col-12">
+      <h5>
+        Price:
+        <small>₱ {{ totalPrice | number: "1.2-2" }}</small>
+      </h5>
+      <h5>
+        Service Charge:
+        <small>₱ {{ totalPrice * serviceCharge | number: "1.2-2" }}</small>
+      </h5>
+      <h5>
+        VAT 12%:
+        <small>₱ {{ totalPrice * vat | number: "1.2-2" }}</small>
+      </h5>
+
+      <h4>
+        Total Amount:
+        <small>₱ {{ totalAmount | number: "1.2-2" }}</small>
+      </h4>
+    </div>
+  </div>
+</div>

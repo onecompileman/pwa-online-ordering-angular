@@ -1,0 +1,103 @@
+<div class="gc-cart">
+  <ng-container *ngIf="orderMenus.length; else emptyCart">
+    <h4>Cart</h4>
+    <div class="row">
+      <div class="col-6">Order</div>
+      <div class="col-4">Quantity</div>
+      <div class="col-2">Total</div>
+    </div>
+    <hr />
+    <div class="row mt-2" *ngFor="let order of orderMenus">
+      <div class="col-6">
+        <!-- <img
+          src="assets/images/menu/{{ order.menu.pictureUrl }}"
+          class="mw-2"
+          alt=""
+          height="24"
+        /> -->
+        {{ order.menuName }}
+      </div>
+      <div class="col-4">
+        <div class="gc-cart__quantity">
+          <div
+            class="gc-cart__quantity-decrease"
+            (click)="
+              order.quantity === 1
+                ? showConfirmDelete(confirmDeleteModal, order)
+                : decreaseQuantity(order)
+            "
+          >
+            -
+          </div>
+          <div class="gc-cart__quantity-quantity">{{ order.quantity }}</div>
+          <div
+            class="gc-cart__quantity-increase"
+            (click)="increaseQuantity(order)"
+          >
+            +
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        ₱ {{ order.menuPrice * order.quantity | number: "1.2-2":"en-US" }}
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12">
+        <h4>
+          Price:
+          <small>₱ {{ totalPrice | number: "1.2-2":"en-US" }}</small>
+        </h4>
+      </div>
+    </div>
+  </ng-container>
+  <div class="row mt-4">
+    <div class="col-12">
+      <div
+        (click)="submitCart()"
+        *ngIf="orderMenus.length > 0"
+        class="gc-cart__submit-order"
+      >
+        Submit Order
+      </div>
+      <a [routerLink]="['/']" class="gc-cart__back" style="font-size: 18px">
+        Back to home
+      </a>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyCart>
+  <div class="gc-cart__empty-cart">
+    <img src="assets/images/cart.svg" alt="Cart" />
+    <b class="mt-4">No Items Found!</b>
+    <span>Sorry mon ami, no items found in your cart.</span>
+  </div>
+</ng-template>
+
+<ng-template #confirmDeleteModal>
+  <div class="modal-header">
+    <span class="modal-title pull-left">Confirmation</span>
+    <button
+      type="button"
+      class="btn-close close pull-right"
+      aria-label="Close"
+      (click)="modalRef?.hide()"
+    >
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This will delete the order, continue?
+
+    <div class="d-flex justify-content-end mt-5">
+      <div class="gc-cart__cancel" (click)="modalRef?.hide()">Cancel</div>
+      <div
+        class="gc-cart__continue"
+        (click)="decreaseQuantity(orderToDelete); modalRef?.hide()"
+      >
+        Continue
+      </div>
+    </div>
+  </div>
+</ng-template>

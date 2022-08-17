@@ -1,0 +1,202 @@
+[
+    {
+      "id": 1,
+      "name": "Adobong Manok",
+      "price": 200,
+      "preparationTime": 5,
+      "cookingTime": 10,
+      "classification": "Main",
+      "isChefRecommendation": 1,
+      "pictureUrl": "adobo.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sinigang na Baboy",
+      "price": 225,
+      "preparationTime": 5,
+      "cookingTime": 10,
+      "classification": "Main",
+      "isChefRecommendation": 0,
+      "pictureUrl": "sinigang.png"
+    },
+    {
+      "id": 3,
+      "name": "Bistek Tagalog",
+      "price": 250,
+      "preparationTime": 5,
+      "cookingTime": 12,
+      "classification": "Main",
+      "isChefRecommendation": 1,
+      "pictureUrl": "bistek.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Sisig",
+      "price": 215,
+      "preparationTime": 5,
+      "cookingTime": 10,
+      "classification": "Main",
+      "isChefRecommendation": 0,
+      "pictureUrl": "sisig.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Kalderetang Baka",
+      "price": 270,
+      "preparationTime": 5,
+      "cookingTime": 12,
+      "classification": "Main",
+      "isChefRecommendation": 1,
+      "pictureUrl": "kaldereta.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Fried Rice",
+      "price": 20,
+      "preparationTime": 1,
+      "cookingTime": 3,
+      "classification": "Main",
+      "isChefRecommendation": 1,
+      "pictureUrl": "fried-rice.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Plain Rice",
+      "price": 15,
+      "preparationTime": 1,
+      "cookingTime": 0,
+      "classification": "Main",
+      "isChefRecommendation": 0,
+      "pictureUrl": "rice.jpg"
+    },
+    {
+      "id": 8,
+      "name": "French Fries",
+      "price": 150,
+      "preparationTime": 3,
+      "cookingTime": 8,
+      "classification": "Appetizer",
+      "isChefRecommendation": 0,
+      "pictureUrl": "fries.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Fried Calamares",
+      "price": 180,
+      "preparationTime": 4,
+      "cookingTime": 9,
+      "classification": "Appetizer",
+      "isChefRecommendation": 1,
+      "pictureUrl": "calamares.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Chicken Tenders",
+      "price": 160,
+      "preparationTime": 3,
+      "cookingTime": 8,
+      "classification": "Appetizer",
+      "isChefRecommendation": 1,
+      "pictureUrl": "tenders.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Garlic Bread",
+      "price": 100,
+      "preparationTime": 2,
+      "cookingTime": 5,
+      "classification": "Appetizer",
+      "isChefRecommendation": 0,
+      "pictureUrl": "bread.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Adobong Mani",
+      "price": 90,
+      "preparationTime": 1,
+      "cookingTime": 0,
+      "classification": "Appetizer",
+      "isChefRecommendation": 0,
+      "pictureUrl": "mani.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Leche Flan",
+      "price": 120,
+      "preparationTime": 2,
+      "cookingTime": 0,
+      "classification": "Dessert",
+      "isChefRecommendation": 1,
+      "pictureUrl": "flan.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Buko Pandan",
+      "price": 100,
+      "preparationTime": 2,
+      "cookingTime": 0,
+      "classification": "Dessert",
+      "isChefRecommendation": 0,
+      "pictureUrl": "pandan.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Saging con Yelo",
+      "price": 100,
+      "preparationTime": 2,
+      "cookingTime": 0,
+      "classification": "Dessert",
+      "isChefRecommendation": 1,
+      "pictureUrl": "yelo.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Softdrinks",
+      "price": 45,
+      "preparationTime": 1,
+      "cookingTime": 0,
+      "classification": "Drink",
+      "isChefRecommendation": 1,
+      "pictureUrl": "softdrinks.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Wine",
+      "price": 160,
+      "preparationTime": 1,
+      "cookingTime": 0,
+      "classification": "Drink",
+      "isChefRecommendation": 1,
+      "pictureUrl": "wine.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Beer",
+      "price": 70,
+      "preparationTime": 1,
+      "cookingTime": 0,
+      "classification": "Drink",
+      "isChefRecommendation": 0,
+      "pictureUrl": "beer.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Bottled Water",
+      "price": 30,
+      "preparationTime": 1,
+      "cookingTime": 0,
+      "classification": "Drink",
+      "isChefRecommendation": 0,
+      "pictureUrl": "water.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Iced Tea",
+      "price": 40,
+      "preparationTime": 1,
+      "cookingTime": 0,
+      "classification": "Drink",
+      "isChefRecommendation": 1,
+      "pictureUrl": "tea.jpg"
+    }
+   ]
